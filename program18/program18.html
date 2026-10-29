@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Background Changer</title>
+</head>
+<body>
+
+    <h2>Simple Background Changer</h2>
+
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="changeBackgroundImage()">Change Background Image</button>
+    <button onclick="resetBackground()">Return to Normal</button>
+
+    <script>
+        const originalColor = "white";
+        const originalImage = "";
+
+        function changeColor() {
+            document.body.style.backgroundImage = "";
+            document.body.style.backgroundColor = "blue";
+        }
+
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage =
+                "url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200')";
+            document.body.style.backgroundColor = "";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
+        }
+
+        function resetBackground() {
+            document.body.style.backgroundColor = originalColor;
+            document.body.style.backgroundImage = originalImage;
+            document.body.style.backgroundSize = "";
+            document.body.style.backgroundRepeat = "";
+        }
+    </script>
+
+</body>
+</html>
